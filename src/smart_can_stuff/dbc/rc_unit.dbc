@@ -1,0 +1,257 @@
+VERSION "HIPBNYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY/4/%%%/4/'%**4YYY///"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ AutonomousManuel 1 "Otonom Kontrol" 0 "Manuel Kontrol" ;
+VAL_TABLE_ EMERGENCY_STATUS 1 " EMERGENCY ACTIVE" 0 " EMERGENCY DEACTIVE" ;
+VAL_TABLE_ DoorKeyStatus 1 "CLOSE" 0 "OPEN" ;
+VAL_TABLE_ DoorOpenStatus 1 "ACTIVE" 0 "DEACTIVE" ;
+VAL_TABLE_ CHARGEPLUGSTATUS 1 "CONNECTED" 0 "NOT CONNECTED" ;
+VAL_TABLE_ DOORSTATUS 1 "OPEN" 0 "CLOSE" ;
+VAL_TABLE_ VehicleStatus 1 "NOT READY" 0 "READY" ;
+VAL_TABLE_ LightStatus 1 "ACTIVE" 0 "DEACTIVE" ;
+VAL_TABLE_ ErrorStatus 1 "ERROR" 0 "NO ERROR" ;
+VAL_TABLE_ BrakePedalVoltageEN 1 "OPEN" 0 "CLOSE" ;
+VAL_TABLE_ HB_Motor_State 1 "Indir_Down" 0 "Cek_Up" ;
+VAL_TABLE_ BrakePedalMotor_Enable 1 "ENABLE" 0 "DISABLE" ;
+VAL_TABLE_ HandBrake_Limit 1 "LIMITTE DEGIL" 0 "LIMITTE" ;
+VAL_TABLE_ SteeringLimit 1 "LIMITTE DEGIL" 0 "LIMITTE" ;
+VAL_TABLE_ HandBrakeData 2 "ON" 1 "OFF" 0 "NEUTRAL" ;
+VAL_TABLE_ MODE_SELECTION 1 "MODE_AUTONOMOUS" 0 "MODE_RC" ;
+VAL_TABLE_ GEAR_SELECTION 2 "REVERSE" 1 "DRIVE" 0 "NEUTRAL" ;
+VAL_TABLE_ SIGNAL_SELECTION 3 "FLASHOR" 2 "LEFT SIGNAL " 1 "RIGHT SIGNAL" 0 "CLOSE" ;
+VAL_TABLE_ SteeringDirection 2 "LEFT_SIDE" 1 "RIGHT_SIDE" 0 "NEUTRAL" ;
+VAL_TABLE_ ValueTable_PressPedal 1 "Not Pressed" 0 "Pressed" ;
+VAL_TABLE_ ValueTable_OnOff 1 "ON" 0 "OFF" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ SeatBeltStatus : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RC_BrakePedal_Press : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2147485955 FeedbackSteeringAngle: 8 Vector__XXX
+ SG_ FeedBackSteeringAngle : 0|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+
+BO_ 2147485593 AutonomousHeardBit: 8 Vector__XXX
+ SG_ AutonomousManuelSelect : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2147485954 Feedback_SENSOR: 8 Vector__XXX
+ SG_ SteeringAngleSensor : 16|16@1+ (1,0) [-327.68|327.67] "C" Vector__XXX
+ SG_ BrakePedalSensor : 0|16@1+ (1,0) [0|6553.5] "C" Vector__XXX
+
+BO_ 2553438777 FB_VehicleSpeed: 8 Vector__XXX
+ SG_ FB_ReelVehicleSpeed_Ms : 48|8@1+ (1,0) [0|255] "m/s" Vector__XXX
+ SG_ FB_ReelVehicleSpeed_KMh : 56|8@1+ (1,0) [0|255] "km/h" Vector__XXX
+ SG_ FB_VehicleSpeed_KMh : 0|8@1+ (1,0) [0|255] "km/h" Vector__XXX
+
+BO_ 2147485953 FB_OMUX_to_AUTONOMOUS: 8 Vector__XXX
+ SG_ FB_EMERGENCY : 19|1@1- (1,0) [-1|0] "" Vector__XXX
+ SG_ FB_ReverseLight : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_RightSignal : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_WindowResistance : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_LeftSignal : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_InteriorLight : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_DRL : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_DoorKeyStatus : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_BrakeLight : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_BatteryVoltage : 32|8@1+ (1,0) [0|255] "V" Vector__XXX
+ SG_ FB_ChargeInput : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_HighBeam : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_LowBeam : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_IGNITION : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_HazardousLight : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_VehicleStatus : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_LeftDoorStatus : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_RightDoorStatus : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_BatterySOC : 24|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ FB_ErrorPowerTrain : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_ErrorBattery : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB_BrakePedal_Voltage_EN : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2147485442 AUTONOMOUS_HB_MotorControl: 8 Vector__XXX
+ SG_ AUTONOMOUS_HB_Motor_PWM : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AUTONOMOUS_HB_MotState : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AUTONOMOUS_HB_MotEN : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2147485441 AUTONOMOUS_SteeringMot_Control: 8 Vector__XXX
+ SG_ AUTONOMOUS_SteeringMot_EN : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AUTONOMOUS_SteeringMot_PWM : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2147485440 AUTONOMOUS_BrakePedalControl: 8 Vector__XXX
+ SG_ AUTONOMOUS_BrakeMotor_Voltage : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AUTONOMOUS_BrakePedalMotor_PER : 24|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ AUTONOMOUS_BrakePedalMotor_ACC : 8|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ AUTONOMOUS_BrakePedalMotor_EN : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2147485699 snd_RCUnit_HandBrakeData: 8 Vector__XXX
+ SG_ RC_HandBrake_PRESS : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RC_HandBrake_FREE : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RC_HB_PwmValue : 8|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ RC_HandBrakeData : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2147485698 snd_RCUnit_BrakeData: 8 Vector__XXX
+ SG_ RC_BrakePedal_Speed : 24|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ RC_BrakePedal_Acc : 8|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ RC_BrakePedal_Pos : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2147485697 snd_RCUnit_SteeringData: 8 Vector__XXX
+ SG_ RC_Steering_RightLimit : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RC_Steering_LeftLimit : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RC_SteeringPWM : 8|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ RC_SteeringDirection : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2147485696 snd_RCUnitToOmux: 8 Vector__XXX
+ SG_ RC_PARK_LAMP : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RC_HornControl : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AUTONOMOUS_EMERGENCY : 14|1@1- (1,0) [-1|0] "" Vector__XXX
+ SG_ RC_WindowResintance : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RC_InteriorLight : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RC_ReverseLight : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RC_DRL : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RC_BrakeLight : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AUTONOMOUS_DOOR_OPEN : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AUTONOMOUS_DOOR_CLOSE : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RC_SignalStatus : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RC_LowBeam : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RC_HighBeam : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RC_SelectionGear : 1|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RC_Ignition : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2364539648 RC_THRT_DATA: 8 Vector__XXX
+ SG_ RC_THRT_PEDAL_POSITION : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RC_THRT_PEDAL_PRESS : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2553348354 GazPedaliSendMessage: 8 Vector__XXX
+ SG_ GazPedaliStatus : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GazPedaliAnalog : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2553373340 PEDALS_DATA: 8 Vector__XXX
+ SG_ PEDAL_BRAKE_STATUS : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PEDAL_THROTTLE_STATUS : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2553373334 FB_MotorDriver: 8 Vector__XXX
+ SG_ GEAR_STATUS_FROM_MOTOR : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PlusTripDistance : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ VehicleRPM : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2553373333 OmuxToMotorControlMessage: 8 Vector__XXX
+ SG_ FastSlowMode1 : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Drive_Mod3_Status : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Drive_Mod2_Status : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Drive_Mod1_Status : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Regen_Status : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ReverseModeStatus : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DriveModeStatus : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MOTOR_ENABLE : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ BO_ 2553438777 "ARAC HIZ BILGILERI. ";
+CM_ SG_ 2147485442 AUTONOMOUS_HB_Motor_PWM "(pwmduty > 127)  // SAGA
+
+(pwmduty <= 127)  // SOLA";
+CM_ BO_ 2147485441 "otonom kontrolcü bu mesaji gönderecek.";
+CM_ SG_ 2147485441 AUTONOMOUS_SteeringMot_PWM "(pwmduty > 127)  // SAGA
+
+(pwmduty <= 127)  // SOLA";
+CM_ BO_ 2147485440 "otonom kontrolcü bu mesaji gönderecek.";
+CM_ BO_ 2364539648 "otonom kontrolcü bu mesaji gönderecek.";
+CM_ SG_ 2364539648 RC_THRT_PEDAL_PRESS "otonom kontrolcü bu mesaji gönderecek.
+deger 0(sifir)dan büyükse : 0 gönderecek. (gaz pedalina basildi)
+deger 0(sifir) sifir ise : 1 gönderecek. (gaz pedalina basilmadi)";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 3221225472 RC_BrakePedal_Press 1 "Not Pressed" 0 "Pressed" ;
+VAL_ 2147485593 AutonomousManuelSelect 1 "Otonom Kontrol" 0 "Manuel Kontrol" ;
+VAL_ 2147485953 FB_EMERGENCY 1 " EMERGENCY ACTIVE" 0 " EMERGENCY DEACTIVE" ;
+VAL_ 2147485953 FB_ReverseLight 1 "ACTIVE" 0 "DEACTIVE" ;
+VAL_ 2147485953 FB_RightSignal 1 "ACTIVE" 0 "DEACTIVE" ;
+VAL_ 2147485953 FB_WindowResistance 1 "ACTIVE" 0 "DEACTIVE" ;
+VAL_ 2147485953 FB_LeftSignal 1 "ACTIVE" 0 "DEACTIVE" ;
+VAL_ 2147485953 FB_InteriorLight 1 "ACTIVE" 0 "DEACTIVE" ;
+VAL_ 2147485953 FB_DRL 1 "ACTIVE" 0 "DEACTIVE" ;
+VAL_ 2147485953 FB_DoorKeyStatus 1 "CLOSE" 0 "OPEN" ;
+VAL_ 2147485953 FB_BrakeLight 1 "ACTIVE" 0 "DEACTIVE" ;
+VAL_ 2147485953 FB_ChargeInput 1 "CONNECTED" 0 "NOT CONNECTED" ;
+VAL_ 2147485953 FB_HighBeam 1 "ACTIVE" 0 "DEACTIVE" ;
+VAL_ 2147485953 FB_LowBeam 1 "ACTIVE" 0 "DEACTIVE" ;
+VAL_ 2147485953 FB_IGNITION 1 "ACTIVE" 0 "DEACTIVE" ;
+VAL_ 2147485953 FB_HazardousLight 1 "ACTIVE" 0 "DEACTIVE" ;
+VAL_ 2147485953 FB_VehicleStatus 1 "NOT READY" 0 "READY" ;
+VAL_ 2147485953 FB_LeftDoorStatus 1 "OPEN" 0 "CLOSE" ;
+VAL_ 2147485953 FB_RightDoorStatus 1 "OPEN" 0 "CLOSE" ;
+VAL_ 2147485953 FB_ErrorPowerTrain 1 "ERROR" 0 "NO ERROR" ;
+VAL_ 2147485953 FB_ErrorBattery 1 "ERROR" 0 "NO ERROR" ;
+VAL_ 2147485953 FB_BrakePedal_Voltage_EN 1 "OPEN" 0 "CLOSE" ;
+VAL_ 2147485442 AUTONOMOUS_HB_MotState 1 "Indir_Down" 0 "Cek_Up" ;
+VAL_ 2147485442 AUTONOMOUS_HB_MotEN 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 2147485441 AUTONOMOUS_SteeringMot_EN 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 2147485440 AUTONOMOUS_BrakeMotor_Voltage 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 2147485440 AUTONOMOUS_BrakePedalMotor_EN 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 2147485699 RC_HandBrake_PRESS 1 "LIMITTE DEGIL" 0 "LIMITTE" ;
+VAL_ 2147485699 RC_HandBrake_FREE 1 "LIMITTE DEGIL" 0 "LIMITTE" ;
+VAL_ 2147485699 RC_HandBrakeData 2 "ON" 1 "OFF" 0 "NEUTRAL" ;
+VAL_ 2147485697 RC_Steering_RightLimit 1 "LIMITTE DEGIL" 0 "LIMITTE" ;
+VAL_ 2147485697 RC_Steering_LeftLimit 1 "LIMITTE DEGIL" 0 "LIMITTE" ;
+VAL_ 2147485697 RC_SteeringDirection 2 "LEFT_SIDE" 1 "RIGHT_SIDE" 0 "NEUTRAL" ;
+VAL_ 2147485696 RC_PARK_LAMP 1 "ACTIVE" 0 "DEACTIVE" ;
+VAL_ 2147485696 RC_HornControl 1 "ON" 0 "OFF" ;
+VAL_ 2147485696 AUTONOMOUS_EMERGENCY 1 " EMERGENCY ACTIVE" 0 " EMERGENCY DEACTIVE" ;
+VAL_ 2147485696 RC_WindowResintance 1 "ON" 0 "OFF" ;
+VAL_ 2147485696 RC_InteriorLight 1 "ON" 0 "OFF" ;
+VAL_ 2147485696 RC_ReverseLight 1 "ON" 0 "OFF" ;
+VAL_ 2147485696 RC_DRL 1 "ON" 0 "OFF" ;
+VAL_ 2147485696 RC_BrakeLight 1 "ON" 0 "OFF" ;
+VAL_ 2147485696 AUTONOMOUS_DOOR_OPEN 1 "ACTIVE" 0 "DEACTIVE" ;
+VAL_ 2147485696 AUTONOMOUS_DOOR_CLOSE 1 "ACTIVE" 0 "DEACTIVE" ;
+VAL_ 2147485696 RC_SignalStatus 3 "FLASHOR" 2 "LEFT SIGNAL " 1 "RIGHT SIGNAL" 0 "CLOSE" ;
+VAL_ 2147485696 RC_LowBeam 1 "ON" 0 "OFF" ;
+VAL_ 2147485696 RC_HighBeam 1 "ON" 0 "OFF" ;
+VAL_ 2147485696 RC_SelectionGear 2 "REVERSE" 1 "DRIVE" 0 "NEUTRAL" ;
+VAL_ 2147485696 RC_Ignition 1 "ON" 0 "OFF" ;
+VAL_ 2364539648 RC_THRT_PEDAL_PRESS 1 "Not Pressed" 0 "Pressed" ;
+VAL_ 2553348354 GazPedaliStatus 1 "Not Pressed" 0 "Pressed" ;
+VAL_ 2553373340 PEDAL_BRAKE_STATUS 1 "Not Pressed" 0 "Pressed" ;
+VAL_ 2553373340 PEDAL_THROTTLE_STATUS 1 "Not Pressed" 0 "Pressed" ;
+VAL_ 2553373334 GEAR_STATUS_FROM_MOTOR 2 "REVERSE" 1 "DRIVE" 0 "NEUTRAL" ;
+VAL_ 2553373333 FastSlowMode1 1 "ON" 0 "OFF" ;
+VAL_ 2553373333 Drive_Mod3_Status 1 "ON" 0 "OFF" ;
+VAL_ 2553373333 Drive_Mod2_Status 1 "ON" 0 "OFF" ;
+VAL_ 2553373333 Drive_Mod1_Status 1 "ON" 0 "OFF" ;
+VAL_ 2553373333 Regen_Status 1 "ON" 0 "OFF" ;
+VAL_ 2553373333 ReverseModeStatus 1 "ON" 0 "OFF" ;
+VAL_ 2553373333 DriveModeStatus 1 "ON" 0 "OFF" ;
+VAL_ 2553373333 MOTOR_ENABLE 1 "ON" 0 "OFF" ;

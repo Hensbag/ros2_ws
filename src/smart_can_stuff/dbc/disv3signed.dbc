@@ -1,0 +1,133 @@
+VERSION "HIPBNYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY/4/%%%/4/'%**4YYY///"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+
+BS_:
+
+BU_:
+
+
+BO_ 2365522048 BUCKET_SENSOR: 8 Vector__XXX
+ SG_ bucket_angle_x : 0|16@1- (0.01,0) [0|0] "" Vector__XXX
+
+BO_ 2365522050 ARM_SENSOR: 8 Vector__XXX
+ SG_ arm_angle_x : 0|16@1- (0.01,0) [0|0] "" Vector__XXX
+
+BO_ 2365522054 BOOM2_SENSOR: 8 Vector__XXX
+ SG_ boom2_angle_x : 0|16@1- (0.01,0) [0|0] "" Vector__XXX
+
+BO_ 2365522052 BOOM_SENSOR: 8 Vector__XXX
+ SG_ boom_angle_x : 0|16@1- (0.01,0) [0|0] "" Vector__XXX
+
+BO_ 2365349871 SWING_SENSOR_POS: 8 Vector__XXX
+ SG_ position_x : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2365350383 SWING_SENSOR_VEL: 8 Vector__XXX
+ SG_ speed_x : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2365522056 VEHICLE_SENSOR: 8 Vector__XXX
+ SG_ x_angle : 0|16@1- (0.01,0) [0|0] "" Vector__XXX
+ SG_ y_angle : 16|16@1- (0.01,0) [0|0] "" Vector__XXX
+
+BO_ 2365445760 j1_bjm: 8 Vector__XXX
+ SG_ x_axis_neutral_status : 0|2@1+ (1,0) [0|3] "x_neutral" Vector__XXX
+ SG_ x_axis_lever_negative_status : 2|2@1+ (1,0) [0|3] "x_lever_negative" Vector__XXX
+ SG_ x_axis_lever_positive_status : 4|2@1+ (1,0) [0|3] "x_lever_positive" Vector__XXX
+ SG_ x_axis_position : 6|10@1+ (1,0) [0|0] "x_position" Vector__XXX
+ SG_ y_axis_neutral_status : 16|2@1+ (1,0) [0|0] "y_neutral" Vector__XXX
+ SG_ y_axis_lever_negative_status : 18|2@1+ (1,0) [0|0] "y_lever_negative" Vector__XXX
+ SG_ y_axis_lever_positive_status : 20|2@1+ (1,0) [0|0] "y_lever_positive" Vector__XXX
+ SG_ y_axis_position : 22|10@1+ (1,0) [0|0] "y_position" Vector__XXX
+ SG_ y_axis_detent_position_status : 36|2@1+ (1,0) [0|0] "y_detent" Vector__XXX
+ SG_ x_axis_detent_posiion_status : 38|2@1+ (1,0) [0|0] "x_detent" Vector__XXX
+ SG_ button_4 : 40|2@1+ (1,0) [0|0] "button_4" Vector__XXX
+ SG_ button_3 : 42|2@1+ (1,0) [0|0] "button_3" Vector__XXX
+ SG_ button_2 : 44|2@1+ (1,0) [0|0] "button_2" Vector__XXX
+ SG_ button_1 : 46|2@1+ (1,0) [0|0] "button_1" Vector__XXX
+ SG_ deadman_status : 48|2@1+ (1,0) [0|0] "deadman" Vector__XXX
+ SG_ button_7 : 50|2@1+ (1,0) [0|0] "button_7" Vector__XXX
+ SG_ button_6 : 52|2@1+ (1,0) [0|0] "button_6" Vector__XXX
+ SG_ button_5 : 54|2@1+ (1,0) [0|0] "button_5" Vector__XXX
+ SG_ button_12 : 56|2@1+ (1,0) [0|0] "button_12" Vector__XXX
+ SG_ button_11 : 58|2@1+ (1,0) [0|0] "button_11" Vector__XXX
+ SG_ button_10 : 60|2@1+ (1,0) [0|0] "button_10" Vector__XXX
+ SG_ button_9 : 62|2@1+ (1,0) [0|0] "button_9" Vector__XXX
+
+BO_ 2365446016 j1_ejm: 8 Vector__XXX
+ SG_ grip_axis_1_neutral_status : 0|2@1+ (1,0) [0|0] "grip_axis_1_neutral" Vector__XXX
+ SG_ grip_axis_1_lever_negative_status : 2|2@1+ (1,0) [0|0] "grip_axis_1_lever_negative" Vector__XXX
+ SG_ grip_axis_2_lever_positive_status : 20|2@1+ (1,0) [0|0] "grip_axis_2_lever_positive" Vector__XXX
+ SG_ grip_axis_2_position : 22|10@1+ (1,0) [0|0] "grip_axis_2_position" Vector__XXX
+ SG_ grip_axis_3_position : 38|10@1+ (1,0) [0|0] "grip_axis_3_position" Vector__XXX
+ SG_ grip_axis_3_neutral_status : 32|2@1+ (1,0) [0|0] "grip_axis_3_neutral" Vector__XXX
+ SG_ grip_axis_3_lever_negative_status : 34|2@1+ (1,0) [0|0] "grip_axis_3_lever_negative" Vector__XXX
+ SG_ grip_axis_3_lever_positive_status : 36|2@1+ (1,0) [0|0] "grip_axis_3_lever_positive" Vector__XXX
+ SG_ grip_axis_3_detent : 50|2@1+ (1,0) [0|0] "detent_3" Vector__XXX
+ SG_ grip_axis_2_detent : 52|2@1+ (1,0) [0|0] "detent_2" Vector__XXX
+ SG_ grip_axis_1_lever_positive_status : 4|2@1+ (1,0) [0|0] "grip_axis_1_lever_positive" Vector__XXX
+ SG_ grip_axis_1_position : 6|10@1+ (1,0) [0|0] "grip_axis_1_position" Vector__XXX
+ SG_ grip_axis_2_neutral_status : 16|2@1+ (1,0) [0|0] "grip_axis_2_neutral" Vector__XXX
+ SG_ grip_axis_2_lever_negative_status : 18|2@1+ (1,0) [0|0] "grip_axis_2_lever_negative" Vector__XXX
+ SG_ grip_axis_1_detent : 54|2@1+ (1,0) [0|0] "detent_1" Vector__XXX
+
+BO_ 2365445761 j2_bjm: 8 Vector__XXX
+ SG_ x_axis_neutral_status : 0|2@1+ (1,0) [0|3] "x_neutral" Vector__XXX
+ SG_ x_axis_lever_negative_status : 2|2@1+ (1,0) [0|3] "x_lever_negative" Vector__XXX
+ SG_ x_axis_lever_positive_status : 4|2@1+ (1,0) [0|3] "x_lever_positive" Vector__XXX
+ SG_ x_axis_position : 6|10@1+ (1,0) [0|0] "x_position" Vector__XXX
+ SG_ y_axis_neutral_status : 16|2@1+ (1,0) [0|0] "y_neutral" Vector__XXX
+ SG_ y_axis_lever_negative_status : 18|2@1+ (1,0) [0|0] "y_lever_negative" Vector__XXX
+ SG_ y_axis_lever_positive_status : 20|2@1+ (1,0) [0|0] "y_lever_positive" Vector__XXX
+ SG_ y_axis_position : 22|10@1+ (1,0) [0|0] "y_position" Vector__XXX
+ SG_ y_axis_detent_position_status : 36|2@1+ (1,0) [0|0] "y_detent" Vector__XXX
+ SG_ x_axis_detent_posiion_status : 38|2@1+ (1,0) [0|0] "x_detent" Vector__XXX
+ SG_ button_4 : 40|2@1+ (1,0) [0|0] "button_4" Vector__XXX
+ SG_ button_3 : 42|2@1+ (1,0) [0|0] "button_3" Vector__XXX
+ SG_ button_2 : 44|2@1+ (1,0) [0|0] "button_2" Vector__XXX
+ SG_ button_1 : 46|2@1+ (1,0) [0|0] "button_1" Vector__XXX
+ SG_ deadman_status : 48|2@1+ (1,0) [0|0] "deadman" Vector__XXX
+ SG_ button_7 : 50|2@1+ (1,0) [0|0] "button_7" Vector__XXX
+ SG_ button_6 : 52|2@1+ (1,0) [0|0] "button_6" Vector__XXX
+ SG_ button_5 : 54|2@1+ (1,0) [0|0] "button_5" Vector__XXX
+ SG_ button_12 : 56|2@1+ (1,0) [0|0] "button_12" Vector__XXX
+ SG_ button_11 : 58|2@1+ (1,0) [0|0] "button_11" Vector__XXX
+ SG_ button_10 : 60|2@1+ (1,0) [0|0] "button_10" Vector__XXX
+ SG_ button_9 : 62|2@1+ (1,0) [0|0] "button_9" Vector__XXX
+
+BO_ 2365446017 j2_ejm: 8 Vector__XXX
+ SG_ grip_axis_1_neutral_status : 0|2@1+ (1,0) [0|0] "grip_axis_1_neutral" Vector__XXX
+ SG_ grip_axis_1_lever_negative_status : 2|2@1+ (1,0) [0|0] "grip_axis_1_lever_negative" Vector__XXX
+ SG_ grip_axis_2_lever_positive_status : 20|2@1+ (1,0) [0|0] "grip_axis_2_lever_positive" Vector__XXX
+ SG_ grip_axis_2_position : 22|10@1+ (1,0) [0|0] "grip_axis_2_position" Vector__XXX
+ SG_ grip_axis_3_position : 38|10@1+ (1,0) [0|0] "grip_axis_3_position" Vector__XXX
+ SG_ grip_axis_3_neutral_status : 32|2@1+ (1,0) [0|0] "grip_axis_3_neutral" Vector__XXX
+ SG_ grip_axis_3_lever_negative_status : 34|2@1+ (1,0) [0|0] "grip_axis_3_lever_negative" Vector__XXX
+ SG_ grip_axis_3_lever_positive_status : 36|2@1+ (1,0) [0|0] "grip_axis_3_lever_positive" Vector__XXX
+ SG_ grip_axis_3_detent : 50|2@1+ (1,0) [0|0] "detent_3" Vector__XXX
+ SG_ grip_axis_2_detent : 52|2@1+ (1,0) [0|0] "detent_2" Vector__XXX
+ SG_ grip_axis_1_lever_positive_status : 4|2@1+ (1,0) [0|0] "grip_axis_1_lever_positive" Vector__XXX
+ SG_ grip_axis_1_position : 6|10@1+ (1,0) [0|0] "grip_axis_1_position" Vector__XXX
+ SG_ grip_axis_2_neutral_status : 16|2@1+ (1,0) [0|0] "grip_axis_2_neutral" Vector__XXX
+ SG_ grip_axis_2_lever_negative_status : 18|2@1+ (1,0) [0|0] "grip_axis_2_lever_negative" Vector__XXX
+ SG_ grip_axis_1_detent : 54|2@1+ (1,0) [0|0] "detent_1" Vector__XXX

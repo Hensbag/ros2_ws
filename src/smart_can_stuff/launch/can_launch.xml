@@ -1,0 +1,37 @@
+<launch>
+  <arg name="interface" default="can0" />
+  <arg name="receiver_interval_sec" default="0.01" />
+  <arg name="sender_timeout_sec" default="0.01" />
+  <arg name="enable_can_fd" default="false" />
+
+  <include file="$(find-pkg-share ros2_socketcan)/launch/socket_can_receiver.launch.py">
+    <arg name="interface" value="$(var interface)" />
+    <arg name="interval_sec" value="$(var receiver_interval_sec)" />
+    <arg name="enable_can_fd" value="$(var enable_can_fd)" />
+  </include>
+
+  <include file="$(find-pkg-share ros2_socketcan)/launch/socket_can_sender.launch.py">
+    <arg name="interface" value="$(var interface)" />
+    <arg name="timeout_sec" value="$(var sender_timeout_sec)" />
+    <arg name="enable_can_fd" value="$(var enable_can_fd)" />
+  </include>
+  
+  <node pkg="smart_can_stuff" exec="can2ros_node" output="screen" >
+    <param name="dbw_dbc_file" value="/home/$HOME/Projects/ros2_ws/src/smart_can_stuff/launch/rc_unit.dbc"/>
+  </node>
+  <node pkg="smart_can_stuff" exec="ros2can_node" output="screen" >
+    <!-- <param name="dbw_dbc_file" value="/home/smart/Projects/ros2_ws/src/smart_can_stuff/launch/rc_unit.dbc"/> -->
+  </node>
+
+  <include file="$(find-pkg-share velodyne)/launch/velodyne-all-nodes-VLP16-launch.py">
+  </include>
+
+  <include file="$(find-pkg-share zed_wrapper)/launch/zed_camera.launch.py">
+      <arg name="camera_model" value="zed2"/>
+      <arg name="grab_resolution" value="VGA"/>
+  </include>
+
+  <include file="$(find-pkg-share ros2_xsens_mti_driver)/launch/xsens_mti_node.launch.py">
+  </include> 
+
+</launch>

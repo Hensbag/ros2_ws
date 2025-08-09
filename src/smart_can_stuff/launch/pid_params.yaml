@@ -1,0 +1,24 @@
+steering_pid_node:
+  ros__parameters:
+    kp: 5.0
+    ki: 0.0
+    kd: -10.0
+    kff: 0.0
+    min_output: 0.0
+    max_output: 255.0
+    set_value_topic: "/beemobs/steering_target_value"
+    feedback_value_topic: "/beemobs/FeedbackSteeringAngle"
+    output_topic: "/beemobs/AUTONOMOUS_SteeringMot_Control"
+    timeout_threshold: 3
+speed_pid_node:
+  ros__parameters:
+    kp: 10.0
+    ki: 1.0
+    kd: 0.0
+    kff: 0.0
+    min_output: 0.0
+    max_output: 255.0
+    set_value_topic: "/beemobs/speed_target_value"
+    feedback_value_topic: "/beemobs/fbvehiclespeed"
+    output_topic: "/beemobs/rcthrtdata"
+    timeout_threshold: 3

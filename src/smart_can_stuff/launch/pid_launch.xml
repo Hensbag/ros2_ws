@@ -1,0 +1,13 @@
+
+<launch>
+  <node
+    pkg="smart_can_stuff"
+    exec="steering_pid_node"
+    name="steering_pid_node"
+    output="screen">
+    <!-- Parametre dosyasını burada belirtebilirsiniz -->
+    <ros2 param load command="load" file="$(find smart_can_stuff)/launch/pid_params.yaml" />
+  </node>
+</launch>
+
+
